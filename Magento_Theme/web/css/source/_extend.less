@@ -1,9 +1,15 @@
+// add slick
+@import 'slick/slick-theme.less';
+@import 'slick/slick.less';
+@import '_styleguide.less';
+
 & when (@media-common = true) {
 
     .page-header ul li a {
         font-family: @font-opensan-bold;
         color: #44525f;
         font-size: 13px;
+        letter-spacing: 0.35px;
     }
 
 }
@@ -25,10 +31,14 @@
 
     .header.panel>.header.links {
         float: left;
-        padding: 10px 0 0 300px;
+        padding: 10px 0 0 305px;
 
         li {
             margin: 0 0 0 45px;
+        }
+
+        li:last-child {
+            padding-left: 5px;
         }
     }
 
@@ -66,16 +76,22 @@
 
     .nav-sections-item-content {
         background-color: #fff;
-        margin: -26px 0 0 294px;
+        margin: -26px 0 0 175px;
 
         .navigation {
             background-color: #fff;
         }
     }
 
-    .navigation .level0>.level-top {
-        font-size: 18px;
-        color: #45515d;
+    .navigation .level0 {
+        margin: 0 24px 0 0;
+
+        .level-top {
+            font-size: 18px;
+            color: #45515d;
+            letter-spacing: 0.5px;
+            padding: 0 0;
+        }
     }
 
 }
