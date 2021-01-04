@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="top.links">
+            <referenceBlock name="header" remove="true"/>
+            <referenceBlock name="authorization-link" remove="true"/>
+            <referenceBlock name="register-link" remove="true"/>
+            <referenceBlock name="catalog.compare.link" remove="true"/>
+            <block class="Magento\Framework\View\Element\Template" name="contact.us" after="wish-list-link" template="Magento_Theme::contactus.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="call.us" after="-" template="Magento_Theme::callus.phtml"/>
+        </referenceBlock>
+
+        <referenceContainer name="content">
+            <!-- <block class="Magento\Framework\View\Element\Template" name="product.info.ak" before="-" template="Magento_Theme::ok.phtml"/> -->
+            <!-- <block class="Magento\Customer\Block\Form\Login" name="customer_form_loginok" template="Magento_Customer::form/login.phtml">
+                <container name="form.additional.infook" as="form_additional_infook"/>
+            </block> -->
+        </referenceContainer>
+    </body>
+</page>

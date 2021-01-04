@@ -1,0 +1,30 @@
+@colorok: red;
+& when (@media-common = true) {
+    .normal-price {
+        .price {
+            color: @colorok;
+        }
+    }
+
+    .price-box {
+        .price-wrapper {
+            color: @colorok;
+        }
+    }
+
+    .actions-primary {
+        .primary {
+            background: @colorok;
+
+            &:hover {
+                background-color: red;
+            }
+        }
+    }
+
+    .product-reviews-summary {
+        .action {
+            color: red;                    
+        }
+    }
+}

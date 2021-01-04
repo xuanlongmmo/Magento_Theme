@@ -1,0 +1,81 @@
+& when (@media-common = true) {
+
+    .page-header ul li a {
+        font-family: @font-opensan-bold;
+        color: #44525f;
+        font-size: 13px;
+    }
+
+}
+
+//
+//  Desktop (style-l.css)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .header.content {
+        padding: 0 0;
+        max-width: 100%;
+        display: flex;
+    }
+
+    .page-header .panel.wrapper {
+            border: none;
+    }
+
+    .header.panel>.header.links {
+        float: left;
+        padding: 10px 0 0 300px;
+
+        li {
+            margin: 0 0 0 45px;
+        }
+    }
+
+    .logo {
+        margin: -37px 0 0 72px;
+    }
+
+    .block-search {
+        width: 650px;
+        margin-left: 360px;
+        padding: 0 0;
+        margin-top: 2px;
+
+        .control {
+            padding: 0 0;
+
+            input {
+                height: 50px;
+            }
+        }
+
+        .action.search {
+            right: 0;
+            background: #45515d;
+            height: 50px;
+            width: 75px;
+            border-radius: unset;
+
+            &:before {
+                font-size: 36px;
+                color: #fff;
+            }
+        }
+    }
+
+    .nav-sections-item-content {
+        background-color: #fff;
+        margin: -26px 0 0 294px;
+
+        .navigation {
+            background-color: #fff;
+        }
+    }
+
+    .navigation .level0>.level-top {
+        font-size: 18px;
+        color: #45515d;
+    }
+
+}
