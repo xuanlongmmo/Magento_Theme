@@ -5,6 +5,10 @@
 
 & when (@media-common = true) {
 
+    .main-content {
+        // background-color: rosybrown;
+    }
+
     li {
         list-style: none;
     }
@@ -92,7 +96,7 @@
         margin: 0 24px 0 0;
 
         .level-top {
-            font-size: 17px;
+            font-size: 18px;
             color: #45515d;
             letter-spacing: 0.5px;
             padding: 0 0;
@@ -104,6 +108,7 @@
         background-color: #e2e0e1;
         margin-top: 4px;
         height: 40px;
+        line-height: 40px;
 
         &-content {
             width: 92.6%;
@@ -111,12 +116,23 @@
             margin: 0 auto;
 
             ul {
+                padding: 0 0;
                 display: flex;
             }
+        }
+    }
 
-            li {
-                display: flex;
-            }
+    .title-header-content>ul>li {
+        display: flex;
+        padding-right: 295px;
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        img {
+            max-height: 50%;
+            padding-top: 8px;
         }
     }
 
