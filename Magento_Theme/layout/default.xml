@@ -16,6 +16,12 @@
             <block class="Magento\Framework\View\Element\Template" name="call.us" after="-" template="Magento_Theme::callus.phtml"/>
         </referenceBlock>
 
+        <referenceContainer name="page.top">
+            <container name="container.title.header" htmlTag="div" htmlClass="title-header" after="navigation.sections">
+                <block class="Magento\Framework\View\Element\Template" name="title.header" template="Magento_Theme::title-header.phtml"/>
+            </container>
+        </referenceContainer>
+
         <referenceContainer name="content">
             <!-- <block class="Magento\Framework\View\Element\Template" name="product.info.ak" before="-" template="Magento_Theme::ok.phtml"/> -->
             <!-- <block class="Magento\Customer\Block\Form\Login" name="customer_form_loginok" template="Magento_Customer::form/login.phtml">

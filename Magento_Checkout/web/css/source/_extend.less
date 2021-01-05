@@ -1,0 +1,18 @@
+& when (@media-common = true) {
+
+    .button-checkout {
+        background-color: #8bb759;
+        font-size: 18px;
+        margin-top: 3px;
+        width: 203px;
+        height: 47px;
+        border-radius: unset;
+    }
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .minicart-wrapper {
+        margin-left: 345px;
+    }
+}

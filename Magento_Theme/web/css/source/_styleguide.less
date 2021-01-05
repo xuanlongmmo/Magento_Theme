@@ -1,13 +1,5 @@
 & when (@media-common =true) {
 
-    //style default
-    body {
-        .lib-css(font-family, @font-roboto-regular);
-        .lib-css(font-size, @font-size13);
-        .lib-css(line-height, @size-20px);
-        .lib-css(color, @color-333);
-    }
-
     h1 {
         .lib-css(font-family, @font-opensan-regular);
         .lib-css(font-size, @font-size36);
@@ -23,12 +15,6 @@
         .lib-css(font-size, @font-size20);
     }
 
-    a {
-        .lib-css(font-family, @font-caveatbrush);
-        .lib-css(color, @color-333);
-        .lib-css(cursor, pointer);
-    }
-
     .text-banner-larger {
         .lib-css(font-family, @font-caveatbrush);
         .lib-css(color, @color-white);
@@ -41,6 +27,47 @@
         .lib-css(color, @color-pink);
         .lib-css(font-size, @font-size56);
         .lib-css(letter-spacing, -1px);
+    }
+
+    input[type="text"] {
+        .lib-css(height, 45px);
+        .lib-css(width, 300px);
+    }
+
+    button {
+        .lib-css(border, none);
+        .lib-css(background-color, @color-green);
+        .lib-css(color, @color-white);
+        .lib-css(font-family, @font-opensan-bold);
+        .lib-css(font-size, @font-size16);
+        .lib-css(text-align, center);
+    }
+
+    h4 {
+        .lib-css(font-family, @font-opensan-bold);
+        .lib-css(font-size, @font-size24);
+        .lib-css(color, @color-red);
+    }
+
+    .footer-link {
+        .lib-css(font-family, @font-opensan-regular);
+        .lib-css(font-size, @font-size20);
+        .lib-css(color, #f4f4f4);
+    }
+
+    .footer-icon {
+        .lib-css(background-color, #4169be);
+        .lib-css(display, block);
+        .lib-css(width,50px);
+        .lib-css(border-radius,50px);
+        .lib-css(height,50px);
+        .lib-css(text-align,center);
+
+        i {
+            .lib-css(color, black);
+            .lib-css(margin-top, 13px);
+            .lib-css(font-size, 20px);
+        }
     }
 
 }
