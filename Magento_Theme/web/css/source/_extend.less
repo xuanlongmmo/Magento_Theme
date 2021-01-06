@@ -1,13 +1,9 @@
 // add slick
-@import 'slick/slick-theme.less';
-@import 'slick/slick.less';
+// @import 'slick/slick-theme.less';
+// @import 'slick/slick.less';
 @import '_styleguide.less';
 
 & when (@media-common = true) {
-
-    .main-content {
-        // background-color: rosybrown;
-    }
 
     li {
         list-style: none;
@@ -136,4 +132,16 @@
         }
     }
 
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    // .block-search {
+    //     width: 450px;
+    //     margin-left: 208px;
+
+    //     input {
+    //         width: 450px;
+    //     }
+
+    // }
 }
