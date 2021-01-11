@@ -28,5 +28,11 @@
                 <container name="form.additional.infook" as="form_additional_infook"/>
             </block> -->
         </referenceContainer>
+         <referenceContainer name="footer-container">
+                <block class="Magento\Store\Block\Switcher" name="browse_basecamp" as="browse_basecamp" template="Magento_Theme::footer.phtml"/>
+            <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content" remove="true">
+            </container>
+            <referenceBlock name="absolute_footer" remove="true"/>
+        </referenceContainer>
     </body>
 </page>
