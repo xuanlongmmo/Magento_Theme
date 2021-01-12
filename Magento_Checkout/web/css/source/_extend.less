@@ -6,13 +6,78 @@
         margin-top: 3px;
         width: 203px;
         height: 47px;
+        color: #fff;
         border-radius: unset;
     }
 
+    .minicart-wrapper .action.showcart:before {
+        display: none;
+    }
 }
 
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .form-button-checkout {
+        text-align: center;
+        
+        .button-checkout {
+            margin: 3px 0 3px 0;
+            width: 150px;
+            height: 45px;
+        }
+    }
+
+    .block-search .control {
+        border-top: 1px solid #d1d1d1;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .form-button-checkout {
+        text-align: center;
+        
+        .button-checkout {
+            width: 170px;
+            height: 45px;
+            margin: 0px 0 0 36px;
+        }
+    }
+
+    .block-search .control {
+        border-top: none;
+    }
+}
+
+//
+//  Desktop (style-l.css)
+//  _____________________________________________
+
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    // .minicart-wrapper {
-    //     margin-left: 345px;
-    // }
+    .form-button-checkout {
+        margin: 47px 25px 0 0px;
+
+        .button-checkout {
+            height: 40px;
+            width: 140px;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .form-button-checkout {
+        margin-right: 70px;
+        margin-top: 0;
+
+        .button-checkout {
+            width: 203px;
+            height: 47px;
+        }
+    }
 }

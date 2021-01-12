@@ -1,4 +1,3 @@
-// set variables
 @font-opensan-bold : 'opensan-bold';
 @font-opensan-regular : 'opensan-regular';
 @font-caveatbrush : 'caveat-brush';
@@ -13,3 +12,11 @@
 @font-size24: 24px;
 @font-size20: 20px;
 @font-size16: 16px;
+
+
+.tranform(@top: 60.5%,@left: 57.5%,@X: -31%,@Y: -56%) {
+    position: absolute;
+    top: calc(@top);
+    left: calc(@left);
+    transform: translateX(@X) translateY(@Y);
+}
