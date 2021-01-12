@@ -9,7 +9,7 @@
     <body>
         <move element="minicart" destination="header-wrapper" after="top.search"/>
         <referenceContainer name="header-wrapper">
-            <block class="Magento\Framework\View\Element\Template" name="button.checkout" template="Magento_Checkout::buttoncheckout.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" after="-" name="button.checkout" template="Magento_Checkout::buttoncheckout.phtml"/>
         </referenceContainer>
     </body>
 </page>

@@ -1,0 +1,30 @@
+<ul class="my-list">
+    <?php
+    for ($i = 1; $i <= 3; $i++) {
+        ?>
+        <li class="my-list-item">
+            <div class="banner-image">
+                <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-top-' . $i)->toHtml(); ?>
+            </div>
+        </li>
+        <?php
+    }
+    ?>
+</ul>
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $(".my-list").slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                margin:29
+            });
+        });
+    });
+</script>
