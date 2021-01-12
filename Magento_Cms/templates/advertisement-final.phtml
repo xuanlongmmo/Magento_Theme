@@ -1,0 +1,21 @@
+<ul class="list-ads-final">
+    <li class="list-item-final">
+        <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('ads-final')->toHtml(); ?>
+    </li>
+</ul>
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $(".list-ads-final").slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+    });
+</script>

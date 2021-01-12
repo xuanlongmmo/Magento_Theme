@@ -7,9 +7,28 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+<<<<<<< HEAD
         <!-- <referenceContainer name="page.wrapper">
             <container before="main.content" htmlTag="div" htmlClass="main-ok-content">
                 <block class="Magento\Framework\View\Element\Template" name="button.ddddd" template="Magento_Cms::test.phtml"/>
+=======
+        <referenceContainer name="page.wrapper">
+            <container before="main.content" htmlTag="div" htmlClass="main-content">
+                <block class="Magento\Framework\View\Element\Template" name="banner.top" template="Magento_Cms::banner-top.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="sponsor.content" template="Magento_Cms::sponsor.phtml"/>
+                <container htmlTag="div" htmlClass="category-populor">
+                    <block class="Magento\Framework\View\Element\Template" name="category.popular" template="Magento_Cms::popular.phtml"/>
+                </container>
+                <container htmlTag="div" htmlClass="advertisement-top">
+                    <block class="Magento\Framework\View\Element\Template" name="advertisement.top" template="Magento_Cms::advertisement-top.phtml"/>
+                </container>
+                <container htmlTag="div" htmlClass="advertisement-bottom">
+                    <block class="Magento\Framework\View\Element\Template" name="advertisement.bottom" template="Magento_Cms::advertisement-bottom.phtml"/>
+                </container>
+                <container htmlTag="div" htmlClass="advertisement-final">
+                    <block class="Magento\Framework\View\Element\Template" name="advertisement.final" template="Magento_Cms::advertisement-final.phtml"/>
+                </container>
+>>>>>>> 039283ea19cb81f88cdbbd40784715433c0b6883
             </container>
         </referenceContainer> -->
     </body>

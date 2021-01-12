@@ -1,0 +1,62 @@
+@import "slick.less";
+@import "slick-theme.less";
+
+& when (@media-common = true) {
+
+    a {
+        color: #fff;
+
+        &:visited {
+            color: #fff;
+        }
+    }
+
+    .main-content {
+        width: 93%;
+        margin: auto;
+        overflow: hidden;
+
+        ul {
+            padding: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .banner-image img {
+        width: 100%;
+    }
+
+    .sponsor-image p {
+        display: flex;
+    }
+
+    .list-sponsor {
+        width: 85%;
+        margin: auto;
+    }
+
+    .category-populor {
+        margin-top: 7px;
+    }
+
+    .category-populor-item {
+        position: relative;
+
+        span {
+            text-transform: uppercase;
+            font-size: 48px;
+            letter-spacing: -1px;
+            color: #fff;
+            font-family: @font-opensan-bold;
+            // .tranform(52.5%, 34.5%, -31%, -56%);
+        }
+    }
+    
+    .advertisement-top {
+        margin-top: 10px;
+    }
+
+    .advertisement-bottom {
+        margin-top: 5px;
+    }
+}
