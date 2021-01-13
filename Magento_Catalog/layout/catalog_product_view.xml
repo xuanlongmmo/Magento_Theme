@@ -9,7 +9,7 @@
     <body>
         <referenceContainer name="content">
             <referenceBlock name="product.info.form.options">
-                <block class="Magento\Catalog\Block\Product\View" name="product.info.ok" after="product.info.options.wrapper.bottom" template="Magento_Catalog::product/view/ok.phtml"/>
+                <!-- <block class="Magento\Catalog\Block\Product\View" name="product.info.ok" after="product.info.options.wrapper.bottom" template="Magento_Catalog::product/view/ok.phtml"/> -->
             </referenceBlock>
         </referenceContainer>
     </body>

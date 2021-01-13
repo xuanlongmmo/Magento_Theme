@@ -1,5 +1,4 @@
 @import "_styleguide.less";
-///cuong
 & when (@media-common = true) {
 
     li {
@@ -13,11 +12,16 @@
         letter-spacing: 0.35px;
     }
 
-    div.title-header-content ul.title-list {
+    div.title-header-content ul {
         display: flex;
+        padding-left: 0;
 
-        li.title-list-item {
-            display: flex;
+        li {
+            padding-right: 289px;
+        }
+
+        li:last-child {
+            padding-right: 0;
         }
     }
 
