@@ -1,6 +1,37 @@
 @colorok: red;
 & when (@media-common = true) {
 
+    // .block-new-products {
+    //     width: 145%;
+    //     margin-left: -23%;
+    //     border: aqua solid;
+    // }
+
+    .block-title {
+        text-align: center;
+        color: @color-black;
+        margin-top: 31px;
+
+        span {
+            font-family: @font-opensan-bold;
+            font-size: 24px;
+            padding-left: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            font-family: @font-opensan-regular;
+            padding-left: 80px;
+            padding-top: 5px;
+        }
+    }
+
+    .item-image {
+        border: 1px solid;
+        height: 345px;
+        text-align: center;
+    }
+
     .actions-primary {
         .primary {
             background: none;
@@ -9,6 +40,16 @@
             span {
                 color: @color-red;
             }
+        }
+    }
+
+    .product-item-details {
+        text-align: center;
+
+        .product-item-link {
+            font-size: 13px;
+            color: @color-black;
+            font-family: @font-opensan-regular;
         }
     }
 
@@ -21,6 +62,41 @@
     }
 
     .old-price .price:before {
-        content: 'Was';
+        content: 'Was ';
     }
+
+}
+
+//
+//  Desktop (style-l.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-main {
+        max-width: 96%;
+    }
+
+    .block-title span {
+        font-size: 24px;
+    }
+
+    .block-title p {
+        font-size: 20px;
+    }
+
+    .products-grid {
+        margin-top: 34px;
+    }
+
+    .product-item-name {
+        margin-top: 15px;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    // your code
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    // your code
 }
