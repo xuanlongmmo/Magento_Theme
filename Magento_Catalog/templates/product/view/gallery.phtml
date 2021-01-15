@@ -1,0 +1,24 @@
+<div class="product-img">
+    <div class="product-img-detail">
+        <?php
+        echo $block->getLayout()
+
+                ->createBlock('Magento\Cms\Block\Block')
+
+                ->setBlockId('product-list-img')
+
+                ->toHtml();
+        ?>
+    </div>
+    <div class="product-img-centre">
+        <?php
+        echo $block->getLayout()
+
+                ->createBlock('Magento\Cms\Block\Block')
+
+                ->setBlockId('product-img')
+
+                ->toHtml();
+        ?>
+    </div>
+</div>
