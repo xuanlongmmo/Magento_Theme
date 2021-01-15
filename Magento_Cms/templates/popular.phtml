@@ -20,7 +20,29 @@
                 speed: 300,
                 slidesToShow: 5,
                 slidesToScroll: 1,
-                // margin:29
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 3
+                        }
+                    }
+                ]
             });
         });
     });

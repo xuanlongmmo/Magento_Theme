@@ -25,5 +25,11 @@
                 </container>
             </container>
         </referenceContainer>
+
+        <referenceContainer name="content">
+            <container htmlTag="div" after="-" htmlClass="banner-blog">
+                <block class="Magento\Framework\View\Element\Template" name="banner.blog" template="Magento_Cms::banner-blog.phtml" />
+            </container>
+        </referenceContainer>
     </body>
 </page>
