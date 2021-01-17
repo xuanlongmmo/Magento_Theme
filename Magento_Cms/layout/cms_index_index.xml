@@ -23,13 +23,17 @@
                 <container htmlTag="div" htmlClass="advertisement-final">
                     <block class="Magento\Framework\View\Element\Template" name="advertisement.final" template="Magento_Cms::advertisement-final.phtml"/>
                 </container>
+                <container htmlTag="div" htmlClass="bestseller-product">
+                    <block class="Magento\Framework\View\Element\Template" name="catalog.product" template="Magento_Cms::catalog_product.phtml"/>
+                </container>
+            </container>
+            <container htmlTag="div" htmlClass="home-blog">
+                <block class="Magento\Framework\View\Element\Template" name="banner.blog" template="Magento_Cms::home-blog.phtml" />
             </container>
         </referenceContainer>
 
-        <referenceContainer name="content">
-            <container htmlTag="div" after="-" htmlClass="banner-blog">
-                <block class="Magento\Framework\View\Element\Template" name="banner.blog" template="Magento_Cms::banner-blog.phtml" />
-            </container>
-        </referenceContainer>
+        <!-- <referenceContainer name="content">
+           
+        </referenceContainer> -->
     </body>
 </page>

@@ -12,18 +12,25 @@
         letter-spacing: 0.35px;
     }
 
-    div.title-header-content ul {
-        display: flex;
-        padding-left: 0;
+    .title-header {
+        width: 100%;
+        background-color: #e2e0e1;
+        margin-top: 4px;
+        height: 40px;
 
-        li {
-            display: flex;
-            // padding-right: 289px;
-            padding-right: 11%;
+        &-content {
+            width: 98%;
+            height: 100%;
+            margin: 0 auto;
         }
+    }
 
-        li:last-child {
-            padding-right: 0;
+    .title-header-content {
+        display: flex;
+        justify-content: space-around;
+        & p {
+            display: flex;
+            padding-top: 10px;
         }
     }
 
@@ -306,33 +313,6 @@
 
     .logo {
         margin: -8px 0 25px 25px;
-    }
-
-    .title-header {
-        width: 100%;
-        background-color: #e2e0e1;
-        margin-top: 4px;
-        height: 40px;
-        line-height: 40px;
-
-        &-content {
-            width: 92.6%;
-            height: 100%;
-            margin: 0 auto;
-        }
-    }
-
-    div.title-header-content ul.title-list li.title-list-item {
-        padding-right: 250px;
-
-        &:last-child {
-            padding-right: 0;
-        }
-
-        img {
-            max-height: 50%;
-            padding-top: 8px;
-        }
     }
 }
 

@@ -1,110 +1,7 @@
 @colorok: red;
 & when (@media-common = true) {
 
-    // .block-new-products {
-    //     width: 145%;
-    //     margin-left: -23%;
-    //     border: aqua solid;
-    // }
-    .product-img{
-        display: flex;
-        .product-img-detail{
-            ul{
-                padding: 0;
-                li{
-                    width: 168px;
-                    height: 168px;
-                   
-                }
-            }
-        }
-    }
-
-
-    .block-title {
-        text-align: center;
-        color: @color-black;
-        margin-top: 31px;
-
-        span {
-            font-family: @font-opensan-bold;
-            font-size: 24px;
-            padding-left: 40px;
-        }
-
-        p {
-            font-size: 20px;
-            font-family: @font-opensan-regular;
-            padding-left: 80px;
-            padding-top: 5px;
-        }
-    }
-
-    .item-image {
-        border: 1px solid;
-        height: 345px;
-        text-align: center;
-    }
-
-    .actions-primary {
-        .primary {
-            background: none;
-            border: none;
     
-            span {
-                color: @color-red;
-            }
-        }
-    }
-
-    .product-item-details {
-        text-align: center;
-
-        .product-item-link {
-            font-size: 13px;
-            color: @color-black;
-            font-family: @font-opensan-regular;
-        }
-    }
-
-    .price-label {
-        display: none;
-    }
-
-    .price-box.price-final_price .special-price .price-wrapper .price {
-        font-size: 24px;
-        color: #141414;
-        font-family: @font-opensan-regular;
-    }
-
-    .old-price .price-wrapper .price {
-        font-size: 14px;
-        letter-spacing: 0px;
-        color: #7d8084;
-        font-family: @font-opensan-regular;
-    }
-
-    .product-item-actions .actions-primary span {
-        font-size: 16px;
-        color: #d83a41;
-        font-family: @font-opensan-bold;
-    }
-
-    .old-price .price:after {
-        content: ',';
-    }
-
-    .old-price .price:before {
-        content: 'Was ';
-    }
-
-    .product-item .price-box {
-        margin: 0 0;
-    }
-
-    .products-grid .product-item-actions {
-        margin: 0 0;
-    }
 
 }
 
@@ -113,25 +10,7 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .page-main {
-        max-width: 96%;
-    }
-
-    .block-title span {
-        font-size: 24px;
-    }
-
-    .block-title p {
-        font-size: 20px;
-    }
-
-    .products-grid {
-        margin-top: 34px;
-    }
-
-    .product-item-name {
-        margin-top: 15px;
-    }
+    
 
 }
 

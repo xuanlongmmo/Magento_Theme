@@ -24,6 +24,29 @@
                 slidesToShow: 8,
                 slidesToScroll: 1,
                 centerPadding: '0px',
+                responsive: [
+                    {
+                        breakpoint: 1440,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 6
+                        }
+                    },
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 3
+                        }
+                    }
+                ]
             });
         });
     });

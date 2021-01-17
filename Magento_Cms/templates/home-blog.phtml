@@ -1,0 +1,7 @@
+<div class="home-blog-title">
+    <span>News</span>
+</div>
+<div class="home-blog-content">
+    <div class="banner-blog"><?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-blog')->toHtml(); ?></div>
+    <?php echo $this->getLayout()->createBlock("Mageplaza\Blog\Block\Widget\Posts")->setPostCount("2")->setShowType("new")->setTemplate("Mageplaza_Blog::widget/posts.phtml")->toHtml(); ?>
+</div>

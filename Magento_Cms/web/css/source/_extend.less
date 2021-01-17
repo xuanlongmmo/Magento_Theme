@@ -3,6 +3,14 @@
 
 & when (@media-common = true) {
 
+    .banner-blog {
+        display: none;
+    }
+
+    .page-main {
+        display: none;
+    }
+
     a {
         color: #fff;
 
@@ -55,7 +63,7 @@
 
         span {
             text-transform: uppercase;
-            font-size: 48px;
+            font-size: 30px;
             letter-spacing: -1px;
             color: #fff;
             font-family: @font-opensan-bold;
@@ -70,56 +78,164 @@
 
     .advertisement-top {
         margin-top: 5px;
-
-        .list-ads-top {
-            display: flex;
-        }
+        display: flex;
+        margin-left: -30px;
 
         .list-item-top {
-            width: 49.5%;
-            margin-right: 1%;
-        }
-
-        li:last-child {
-            margin-right: 0;
-        } 
-
-        img {
-            width: 100%;
-            height: 100%;
+            margin-left: 30px;
         }
     }
 
     .advertisement-bottom {
-        margin-top: 1px;
-
-        .list-ads-bottom {
-            display: flex;
-        }
+        margin-top: 5px;
+        display: flex;
+        margin-left: -22px;
 
         .list-item-bottom {
-            width: 33%;
-            margin-right: 0.5%;
-        }
-
-        li:last-child {
-            margin-right: 0;
-        } 
-
-        img {
-            width: 100%;
-            height: 100%;
+            margin-left: 22px;
         }
     }
 
     .advertisement-final {
-        margin-top: 8px;
+        margin-top: 13px;
     }
 
     .slick-slide img {
         width: 100%;
         height: 100%;
     }
+
+    .bestseller-product {
+        margin-top: 40px;
+    }
+
+    .product-img{
+        display: flex;
+        .product-img-detail{
+            ul{
+                padding: 0;
+                li{
+                    width: 168px;
+                    height: 168px;
+                }
+            }
+        }
+    }
+
+    .block-title {
+        text-align: center;
+        color: @color-black;
+        margin-top: 31px;
+
+        span {
+            font-family: @font-opensan-bold;
+            font-size: 24px;
+        }
+
+        p {
+            display: none;
+            font-size: 20px;
+            font-family: @font-opensan-regular;
+            padding-top: 5px;
+        }
+    }
+
+    .item-image {
+        border: 1px solid;
+        height: auto;
+        text-align: center;
+    }
+
+    .actions-primary {
+        .primary {
+            background: none;
+            border: none;
+    
+            span {
+                color: @color-red;
+            }
+        }
+    }
+
+    .product-item-details {
+        text-align: center;
+
+        .product-item-link {
+            font-size: 13px;
+            color: @color-black;
+            font-family: @font-opensan-regular;
+        }
+    }
+
+    .price-label {
+        display: none;
+    }
+
+    .price-box.price-final_price .special-price .price-wrapper .price {
+        font-size: 24px;
+        color: #141414;
+        font-family: @font-opensan-regular;
+    }
+
+    .old-price .price-wrapper .price {
+        font-size: 14px;
+        letter-spacing: 0px;
+        color: #7d8084;
+        font-family: @font-opensan-regular;
+    }
+
+    .product-item-actions .actions-primary span {
+        font-size: 16px;
+        color: #d83a41;
+        font-family: @font-opensan-bold;
+    }
+
+    .old-price .price:after {
+        content: ',';
+    }
+
+    .old-price .price:before {
+        content: 'Was ';
+    }
+
+    .product-item .price-box {
+        margin: 0 0;
+    }
+
+    .home-blog {
+        width: 100%;
+        background-color: #efefef;
+        margin-top: -20px;
+
+        &-title {
+            margin-top: 33px;
+            margin-left: 10px;
+            text-align: center;
+
+            span {
+                font-size: 24px;
+                color: @color-black;
+                font-family: @font-opensan-bold;
+            }
+        }
+
+        &-content {
+            margin: 0 auto;
+            width: 93%;
+            display: flex;
+            margin-top: -6px;
+        }
+    }
+
+    .banner-blog {
+        margin-top: 34px;
+    }
+
+    .post-list-container {
+        margin-left: -3px;
+        margin-top: 2px;
+    }
+
 
     .mp-post-info {
         display: none;
@@ -140,8 +256,9 @@
     }
 
     .post-list-item {
-        width: 430px;
+        width: auto;
         border: none;
+        margin-left: 25px;
 
         .post-info-wraper {
             padding: 0 0;
@@ -153,8 +270,16 @@
         }
     }
     
+    .post-list-item:first-child {
+        margin-left: 0; 
+    }
+
+    .mp-post-title {
+        margin-top: -2px;
+    }
+
     .post-link-title {
-        font-size: 20px;
+        font-size: 15px;
 
         &:visited {
             color: @color-black;
@@ -162,7 +287,7 @@
     }
 
     .post-short-description {
-        font-size: 16px;
+        font-size: 14px;
         color: @color-black;
         font-family: @font-opensan-regular;
     }
@@ -175,4 +300,146 @@
     .list-post-tabs:hover {
           background-color: none;
     }
+
+    .row .post-list-item .post-item-wraper .post-image {
+        min-height: 180px;
+    }
+
+    .row .post-list-item .post-item-wraper .post-image .img-responsive {
+        height: auto;
+    }
+
+}
+
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .my-list-item .banner-image img {
+        height: 150px;
+    }
+
+    .category-populor .list-category .category-populor-item span {
+        font-size: 20px;
+    }
+
+    .main-content .advertisement-top {
+        display: block;
+    }
+
+    .main-content .advertisement-bottom {
+        display: block;
+    }
+
+    .post-list-item:last-child {
+        display: none;
+    }
+
+    .home-blog .home-blog-content {
+        width: 70%;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .my-list-item .banner-image img {
+        height: 250px;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .page-main {
+        max-width: 96%;
+    }
+
+    .block-title span {
+        font-size: 24px;
+    }
+
+    .block-title p {
+        font-size: 20px;
+    }
+
+    .products-grid {
+        margin-top: 34px;
+    }
+
+    .product-item-name {
+        margin-top: 15px;
+    }
+}
+
+//
+//  Desktop (style-l.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .block-title p {
+        display: block;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+    .post-list-item {
+        width: 430px;
+    }
+
+    .post-list-container {
+        margin: auto;
+    }
+
+    .product-item-info .item-image {
+        height: auto;
+    }
+
+    .product-item-actions {
+        margin-top: 0;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+
+    .category-populor .list-category .category-populor-item span {
+        font-size: 48px;
+    }
+
+    .item-image {
+        height: 345px;
+    }
+
+    .products-grid .product-item-actions {
+        margin-top: -11px;
+    }
+
+    .block-title {
+        span {
+            padding-left: 40px;
+        }
+
+        p {
+            padding-left: 80px;
+        }
+    }
+
+    .post-list-item:first-child {
+        margin-left: 25px; 
+    }
+
+    .banner-blog {
+        display: block;
+    }
+
+    .row .post-list-item .post-item-wraper .post-image {
+        min-height: 310px;
+    }
+
+    .post-link-title {
+        font-size: 20px;
+    }
+
+    .post-short-description {
+        font-size: 16px;
+    }
+
 }
