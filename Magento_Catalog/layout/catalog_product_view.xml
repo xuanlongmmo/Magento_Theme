@@ -5,12 +5,42 @@
  * See COPYING.txt for license details.
  */
 -->
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="mage/gallery/gallery.css"/>
+    </head>
+    <update handle="catalog_product_opengraph" />
+    <update handle="page_calendar"/>
     <body>
-        <referenceContainer name="content">
-            <referenceBlock name="product.info.form.options">
-                <!-- <block class="Magento\Catalog\Block\Product\View" name="product.info.ok" after="product.info.options.wrapper.bottom" template="Magento_Catalog::product/view/ok.phtml"/> -->
-            </referenceBlock>
-        </referenceContainer>
+        <attribute name="itemtype" value="http://schema.org/Product" />
+        <attribute name="itemscope" value="itemscope"/>
+        <container name="product.info.stock.sku" label="Product auxiliary info" htmlTag="div" remove="true" htmlClass="product-info-stock-sku">
+            <container name="product.info.type" before="-"/>
+            <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku" template="Magento_Catalog::product/view/attribute.phtml" after="product.info.type">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getSku</argument>
+                    <argument name="at_code" xsi:type="string">sku</argument>
+                    <argument name="css_class" xsi:type="string">sku</argument>
+                    <argument name="at_label" xsi:type="string">default</argument>
+                    <argument name="add_attribute" xsi:type="string">itemprop="sku"</argument>
+                </arguments>
+            </block>
+        </container>
+        <container name="product.info.extrahint" as="extrahint" label="Product View Extra Hint">
+            <container name="product.info.social" label="Product social links container" htmlTag="div" htmlClass="product-social-links">
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.addto" as="addto" template="Magento_Catalog::product/view/addto.phtml">
+                    <block class="Magento\Catalog\Block\Product\View\AddTo\Compare" name="view.addto.compare" after="view.addto.wishlist"
+                            template="Magento_Catalog::product/view/addto/compare.phtml" >
+                        <arguments>
+                            <argument name="addToCompareViewModel" xsi:type="object">Magento\Catalog\ViewModel\Product\Checker\AddToCompareAvailability</argument>
+                        </arguments>
+                    </block>
+                </block>
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.mailto" template="Magento_Catalog::product/view/mailto.phtml"/>
+            </container>
+        </container>
+        <move element="page.main.title" destination="product.info.main" as="new_alias"  before="-"/>
+        <block class="" name="product.old_price" template="Magento_Catalog::product/view/old_price.phtml" before="page.main.title"/>
+        <referenceBlock name="product.info.media.image" template="Magento_Catalog::product/view/gallery.phtml"></referenceBlock>
     </body>
 </page>
