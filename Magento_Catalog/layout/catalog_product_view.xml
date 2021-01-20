@@ -40,7 +40,5 @@
             </container>
         </container>
         <move element="page.main.title" destination="product.info.main" as="new_alias"  before="-"/>
-        <block class="" name="product.old_price" template="Magento_Catalog::product/view/old_price.phtml" before="page.main.title"/>
-        <referenceBlock name="product.info.media.image" template="Magento_Catalog::product/view/gallery.phtml"></referenceBlock>
     </body>
 </page>
