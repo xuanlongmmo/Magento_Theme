@@ -26,6 +26,7 @@
                 </arguments>
             </block>
         </container>
+        
         <container name="product.info.extrahint" as="extrahint" label="Product View Extra Hint">
             <container name="product.info.social" label="Product social links container" htmlTag="div" htmlClass="product-social-links">
                 <block class="Magento\Catalog\Block\Product\View" name="product.info.addto" as="addto" template="Magento_Catalog::product/view/addto.phtml">
@@ -40,5 +41,6 @@
             </container>
         </container>
         <move element="page.main.title" destination="product.info.main" as="new_alias"  before="-"/>
+        <!-- <move element="product.price.tier" destination="product.info.main" as="new_alias"  before="page.main.title"/> -->
     </body>
 </page>
