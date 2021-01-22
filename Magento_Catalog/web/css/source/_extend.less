@@ -26,25 +26,28 @@
         display: none;
     }
 
-    .block-title {
-        display: none;
+    .block.filter .filter-title {
+        text-align: unset;
+        margin-bottom: 0;
+
+        strong {
+            font-size: 12px;
+            color: #848484;
+            font-family: @font-opensan-regular;
+        }
     }
 
     .block-subtitle.filter-subtitle {
         display: none;
     }
 
-    .block-content.filter-content {
-        margin-top: 53px;
+    .block-content.filter-content a {
+        font-size: 14px;
+        color: #5e5e5e;
+        font-family: @font-opensan-bold;
 
-        a {
-            font-size: 14px;
+        &:visited {
             color: #5e5e5e;
-            font-family: @font-opensan-bold;
-    
-            &:visited {
-                color: #5e5e5e;
-            }
         }
     }
 
@@ -70,16 +73,6 @@
         display: none;
     }
 
-    .page-main .columns .sidebar-main {
-        padding-right: 0;
-        width: 15%;
-    }
-
-    .page-wrapper .page-main .columns .column.main {
-        padding-left: 0;
-        width: 85%;
-    }
-
     .toolbar-products {
         margin-bottom: 0;
         padding: 0 0;
@@ -93,6 +86,20 @@
 
     .action.sorter-action.sort-asc {
         display: none;
+    }
+
+    .modes-mode {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .modes-mode.active {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .modes-mode:last-child {
+        border-left: 0;
     }
 
     .products {
@@ -139,6 +146,23 @@
     .modes {
         float: right;
     }
+
+    .page-products .toolbar .limiter {
+        display: block;
+        float: right;
+    }
+
+    .products.wrapper~.toolbar .limiter {
+        display: none;
+    }
+
+    .limiter-options {
+        border-radius: 5px;
+        font-size: 16px;
+        color: #212121;
+        font-family: @font-opensan-regular;
+        -webkit-appearance: none;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
@@ -146,6 +170,28 @@
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .page-main .columns .sidebar-main {
+        padding-right: 0;
+        width: 15%;
+    }
+
+    .page-wrapper .page-main .columns .column.main {
+        padding-left: 0;
+        width: 85%;
+    }
+
+    .block.filter .filter-title {
+        margin-top: 17px;
+
+        strong {
+            padding-left: 12px;
+        }
+    }
+    
+    .block-content.filter-content {
+        margin-top: 16px;
+    }
+
     .sorter {
         margin: -14px 0 0 0;
     }
@@ -158,5 +204,20 @@
         width: 183px;
         height: 46px;
         font-size: 16px;
+    }
+
+    .modes {
+        margin-right: 0;
+        margin-top: -10px;
+    }
+
+    .modes-mode {
+        height: 30px;
+    }
+
+    .limiter-options {
+        margin: -10px 8px 0 7px;
+        width: 160px;
+        height: 46px;
     }
 }
