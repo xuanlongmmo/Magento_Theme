@@ -56,10 +56,6 @@
     }
 
     .filter-options .filter-options-title {
-        border-top: 1px solid;
-        width: 76%;
-        padding-top: 19px;
-        padding-left: 11px;
         font-size: 16px;
         color: #595959;
         font-family: @font-opensan-bold;
@@ -76,6 +72,12 @@
     .toolbar-products {
         margin-bottom: 0;
         padding: 0 0;
+    }
+
+    .count-number {
+        font-size: 16px;
+        color: @color-black;
+        font-family: @font-opensan-regular;
     }
 
     .sorter-options {
@@ -128,6 +130,60 @@
         color: #4e4e4e;
         font-family: @font-opensan-bold;
     }
+
+    .toolbar-amount {
+        display: none;
+    }
+}
+
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    // your code
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .page-wrapper .page-main {
+        margin: auto;
+    }
+
+    .page-title {
+        margin-bottom: 0;
+    }
+
+    .filter-options .filter-options-title {
+        border: 1px solid;
+        width: auto;
+        padding: 8px 5px;
+    }
+
+    .block.filter {
+        margin-bottom: 0;
+    }
+
+    .products {
+        margin: 0 0 0 0;
+    }
+
+    li.item.product.product-item {
+        margin-top: 10px;
+    }
+
+    .product.name.product-item-name {
+        margin-top: 0;
+    }
+
+    .filter-item-mobile {
+        display: block;
+    }
+
+    .filter-item-desktop {
+        display: none;
+    }
+
 }
 
 //
@@ -136,10 +192,6 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .sorter {
-        float: left;
-    }
-
-    .toolbar-amount {
         float: left;
     }
 
@@ -163,6 +215,22 @@
         font-family: @font-opensan-regular;
         -webkit-appearance: none;
     }
+
+
+    .filter-options .filter-options-title {
+        border-top: 1px solid;
+        width: 76%;
+        padding-top: 19px;
+        padding-left: 11px;
+    }
+
+    .filter-item-mobile {
+        display: none;
+    }
+
+    .filter-item-desktop {
+        display: block;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
@@ -181,11 +249,17 @@
     }
 
     .block.filter .filter-title {
-        margin-top: 17px;
+        margin-top: 6px;
 
         strong {
             padding-left: 12px;
         }
+    }
+
+    .count-number {
+        display: block;
+        margin-top: -11px;
+        margin-left: 12px;
     }
     
     .block-content.filter-content {

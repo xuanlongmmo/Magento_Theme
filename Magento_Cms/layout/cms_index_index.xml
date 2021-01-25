@@ -31,9 +31,5 @@
                 <block class="Magento\Framework\View\Element\Template" name="banner.blog" template="Magento_Cms::home-blog.phtml" />
             </container>
         </referenceContainer>
-
-        <!-- <referenceContainer name="content">
-           
-        </referenceContainer> -->
     </body>
 </page>
