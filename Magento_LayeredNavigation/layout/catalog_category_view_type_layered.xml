@@ -7,8 +7,7 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="content">
-            <block name="items.number" template="Magento_Catalog::product/list/toolbar/number.phtml"/>
-        </referenceBlock>
+        <move element="items.number" destination="sidebar.main" before="-"/>
+        <move element="catalog.leftnav" destination="sidebar.main" after="items.number"/>
     </body>
 </page>
