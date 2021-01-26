@@ -1,8 +1,49 @@
 & when (@media-common = true) {
+    .page-title{
+        font-size: 36px;
+        letter-spacing: -1px;
+        line-height: 4px;
+        color: #45515d;
+        font-weight: 400;
+        font-family: "Open Sans";
+    }
+    .product-info-main{
+        .page-title-wrapper{
+            text-align: unset;
+        }
+    }
+    .reviews-actions{
+        .view{
+            color: black;
+        }
+        .add{
+            display: none;
+        }
+    }
+    .price-box{
+        display: flex;
+        flex-direction: column;
+        .normal-price{
+            order: 2;
+            .price-container{
+                flex-direction: row;
+                display: flex;
+                .price-wrapper{
+                    order: 2;
+                }
+                .price-now{
+                    order: 1;
+                }
+            }
+            
+        }
+        .old-price{
+            order:1;
+        }
+    }
     .page-wrapper .page-main {
         max-width: 86.5%;
     }
-
     .page-wrapper .breadcrumbs {
         max-width: 84.4%;
         margin-top: 17px;
@@ -26,25 +67,28 @@
         display: none;
     }
 
-    .block-title {
-        display: none;
+    .block.filter .filter-title {
+        text-align: unset;
+        margin-bottom: 0;
+
+        strong {
+            font-size: 12px;
+            color: #848484;
+            font-family: @font-opensan-regular;
+        }
     }
 
     .block-subtitle.filter-subtitle {
         display: none;
     }
 
-    .block-content.filter-content {
-        margin-top: 53px;
+    .block-content.filter-content a {
+        font-size: 14px;
+        color: #5e5e5e;
+        font-family: @font-opensan-bold;
 
-        a {
-            font-size: 14px;
+        &:visited {
             color: #5e5e5e;
-            font-family: @font-opensan-bold;
-    
-            &:visited {
-                color: #5e5e5e;
-            }
         }
     }
 
@@ -70,23 +114,63 @@
         display: none;
     }
 
-    .page-main .columns .sidebar-main {
-        padding-right: 0;
-        width: 15%;
-    }
-
-    .page-main .columns .main {
-        padding-left: 0;
-        width: 85%;
-    }
-
     .toolbar-products {
         margin-bottom: 0;
+        padding: 0 0;
+    }
+
+    .sorter-options {
+        border-radius: 5px;
+        color: #212121;
+        font-family: @font-opensan-regular;
+    }
+
+    .action.sorter-action.sort-asc {
+        display: none;
+    }
+
+    .modes-mode {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .modes-mode.active {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .modes-mode:last-child {
+        border-left: 0;
     }
 
     .products {
         margin: 16px 0 0 0;
     }
+
+    .product.details.product-item-details .price-box.price-final_price .special-price .price {
+        color: #b70b2b;
+        font-size: 18px;
+    }
+
+    .page-products .product-item-info {
+        width: 100%;
+    }
+
+    .product-image-wrapper {
+        border: #b5b5b5 solid 1px;
+    }
+
+    .product-item-info .product-item-details {
+        text-align: unset;
+    }
+
+    .product-item-info .product-item-details .product-item-link {
+        font-size: 18px;
+        color: #4e4e4e;
+        font-family: @font-opensan-bold;
+    }
+
+
 
 }
 
@@ -95,8 +179,34 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    
+    .sorter {
+        float: left;
+    }
 
+    .toolbar-amount {
+        float: left;
+    }
+
+    .modes {
+        float: right;
+    }
+
+    .page-products .toolbar .limiter {
+        display: block;
+        float: right;
+    }
+
+    .products.wrapper~.toolbar .limiter {
+        display: none;
+    }
+
+    .limiter-options {
+        border-radius: 5px;
+        font-size: 16px;
+        color: #212121;
+        font-family: @font-opensan-regular;
+        -webkit-appearance: none;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
@@ -104,5 +214,54 @@
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
-    // your code
+    .page-main .columns .sidebar-main {
+        padding-right: 0;
+        width: 15%;
+    }
+
+    .page-wrapper .page-main .columns .column.main {
+        padding-left: 0;
+        width: 85%;
+    }
+
+    .block.filter .filter-title {
+        margin-top: 17px;
+
+        strong {
+            padding-left: 12px;
+        }
+    }
+    
+    .block-content.filter-content {
+        margin-top: 16px;
+    }
+
+    .sorter {
+        margin: -14px 0 0 0;
+    }
+
+    .sorter-label {
+        font-size: 16px;
+    }
+
+    .sorter-options {
+        width: 183px;
+        height: 46px;
+        font-size: 16px;
+    }
+
+    .modes {
+        margin-right: 0;
+        margin-top: -10px;
+    }
+
+    .modes-mode {
+        height: 30px;
+    }
+
+    .limiter-options {
+        margin: -10px 8px 0 7px;
+        width: 160px;
+        height: 46px;
+    }
 }

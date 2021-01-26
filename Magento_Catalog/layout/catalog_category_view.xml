@@ -7,6 +7,13 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        
+        <!-- <referenceContainer name="content">
+            <block class="Magento\Catalog\Block\Product\ProductList\Toolbar" before="-" name="product_list_custom_toolbar" template="Magento_Catalog::product/list/toolbar.phtml">
+                <block class="Magento\Theme\Block\Html\Pager" name="product_list_toolbar_pager"/>
+            </block>
+            <action method="setToolbarBlockName">
+                <argument name="name" xsi:type="string">product_list_toolbar</argument>
+            </action>
+        </referenceContainer> -->
     </body>
 </page>
