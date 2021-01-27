@@ -1,0 +1,38 @@
+@import '_theme.less';
+& when (@media-common = true) {
+    .product-info-main{
+        .page-title-wrapper{
+            .lib-css(text-align, @unset);
+        }
+    }
+    .reviews-actions{
+        .view{
+            .lib-css(color, @color-45515d);
+        .add{
+            .lib-css(display,@none);
+        }
+    }
+    .price-box{
+        .lib-css(display,flex);
+        .lib-css(flex-direction,columns);
+        .normal-price{
+            .lib-css(order,@number-2);
+            .price-container{
+                .lib-css(flex-direction,@row);
+                .lib-css(display, flex);
+                .price-wrapper{
+                    .lib-css(order,@number-2);
+                }
+                .price-now{
+                    .lib-css(order,@number-1);
+                }
+            }
+            
+        }
+        .old-price{
+            .lib-css(order,@number-1);
+        }
+    }
+
+    }
+}
