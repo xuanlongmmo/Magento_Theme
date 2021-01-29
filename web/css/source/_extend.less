@@ -1,0 +1,35 @@
+@font-opensans-regular:'OpenSans-Regular';
+
+// product details
+.mixin-product-info(@fonts,@color,@letter) {
+    font-size: @fonts;
+    letter-spacing: @letter;
+    line-height: 4px;
+    color: @color;
+    font-weight: 400;
+    font-family: @font-opensans-regular;
+}
+.mixin-pro-details(@fonts,@color) {
+    font-size: @fonts;
+    color: @color;
+    font-weight: 600;
+    text-align: center;
+    font-family: @font-opensans-semibold;
+}
+.mixin-pro-content(@fonts,@color) {
+    font-size: @fonts;
+    color: @color;
+    font-weight: 400;
+    font-family: @font-opensans-regular;
+}
+.mixin-button(@width,@height){
+    background-color: @color-green;
+    font-size: @font-size18;
+    line-height: @font-size4;
+    color: @color-white;
+    font-weight: 700;
+    font-family: "Open Sans";
+    text-align: center;
+    width: @width;
+    height: @height;
+}
