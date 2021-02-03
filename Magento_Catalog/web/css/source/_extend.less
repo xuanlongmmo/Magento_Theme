@@ -1,12 +1,41 @@
-
+@media (min-width: 768px), print {
+    .page-main {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
 & when (@media-common = true) {
 //    Page product detail
 
     // Link 
-   
+    // css width list image
+    .fotorama__nav .fotorama__nav--thumbs {
+        width: 172px;
+    }
+    // css button image
+    .image-gallery {
+        background-color: #ececec;
+        width: 500px;
+    }
+    // css button video
+    .video-gallery {
+        background-color: #ececec;
+        width: 500px;
+    }
+    // css hidden ???
+    .product-item-info .product-item-details {
+        .field  {
+            display: none;
+        }
+        .product-item-actions {
+            display: none;
+        }
+    }
+    // css change color star
     .rating-summary .rating-result>span:before {
         color: #ebd435;
     }
+    // ???
     .swatch-attribute-label {
         font-weight: 400;
      }
@@ -19,16 +48,30 @@
     .fotorama__thumb-border{
         display: none;
     }
-   .fotorama__stage__frame.magnify-wheel-loaded.fotorama_vertical_ratio.fotorama__loaded.fotorama__loaded--img.fotorama__active {
-       
-   }
-  .fotorama__nav__frame.fotorama__nav__frame--thumb {
-      border: 1px solid #b5b5b5;
-  }
+    // css border list image
+    .fotorama__thumb {
+        border: 1px solid #b5b5b5;
+    }
+    // css width list image
+    .page-main .fotorama__nav--thumbs {
+        width: 172px !important;
+    }
+    // css max width page-main
+    .page-main{.fotorama__nav--thumbs {
+        width: 172px;
+    }
+        max-width: 88.7%;
+    }
+    .fotorama__stage {
+        margin-left: 5px;
+        // border: 1px solid #b5b5b5;
+    }
+    // css page-wrapper
     .page-wrapper {
         .breadcrumbs {
-            padding-left: 0px;
-            padding-right: 0px;
+            margin-top: 44px;
+            margin-left: 139px;
+            // padding-top: 45px;
             ul{
                 li a{
                     font-size: 14px;
@@ -45,12 +88,10 @@
             }
         }
     }
-    .page-main{
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-top: 26px;
-   }
+    // css column main
+    
     .column.main{
+        width: 100%;;
         margin-top: 24px;
         .product-info-main {
             width: 497px;
@@ -68,11 +109,11 @@
             }
             .box-tocart .field.qty, .product-options-bottom .box-tocart .field.qty {
                 display: block;
-           }
-           .box-tocart .action.tocart, .product-options-bottom .box-tocart .action.tocart {
+            }
+            .box-tocart .action.tocart, .product-options-bottom .box-tocart .action.tocart {
                 .mixin-button(518px,57px);
-           }
-           .product-info-price {
+            }
+            .product-info-price {
                border-bottom: 1px solid #a3a3a3;
                display: flex;
                flex-wrap: wrap;
@@ -87,8 +128,48 @@
                }
            }
         }
+        .product.info.detailed {
+            width: 1050px;
+            margin-left: -26px;
+            margin-top: 144px;
+            .data.item.title {
+                width: 340px;
+                height: 48px;
+                margin-right: 10px;
+              }
+            .data.item.content {
+                border: 1px solid #b4b4b4;
+            }
+          }
+          .block.related {
+            .block-actions {
+                display: none;
+            }
+            .block-content {
+                .products-related {
+                    .price-box .price-final_price {
+                        span {
+                            color: #b3203a;
+                        }
+                    }
+                    .product-items {
+                        li {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+          }
+
     }
-   
+   .page-main {
+    .columns {
+        .column.main {
+            width: 100%;
+        }
+    }
+   }
+   // css review
     .reviews-actions {
         .view {
             color: black;
@@ -136,6 +217,7 @@
     .block.related {
         float: right;
     }
+    //css 
     .product.info.detailed {
         float: left;
         width: 1040px;
@@ -143,6 +225,7 @@
         div#tab-label-additional {
             margin: 0 5px;
         }
+        
     }
 /// End page product detail
 
@@ -156,7 +239,7 @@
         font-family: "Open Sans";
     }
     .page-wrapper .page-main {
-        max-width: 86.5%;
+        max-width: 86.7%;
     }
     .page-wrapper .breadcrumbs {
         max-width: 84.4%;   
@@ -298,6 +381,7 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
     // your code
+   
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {

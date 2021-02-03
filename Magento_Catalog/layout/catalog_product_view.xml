@@ -38,7 +38,7 @@
         <move element="page.main.title" destination="product.info.main" as="new_alias"  before="-"/>
         <!-- Move price to title -->
         <move element="product.price.final" destination="product.info.price" as="new_alias"  before="-"/>
-        <move element="product.info.social" destination="product.info.price"  />
+        <move element="product.info.social" destination="product.info.price" />
         <!-- Button share -->
         <referenceContainer name="product.info.social">
             <block class="Magento\Catalog\Block\Product\View" name="product.info.socialmedia" template="Magento_Catalog::product/view/butttonshare.phtml"/>
@@ -62,6 +62,12 @@
              </arguments>
           </block>
         </referenceBlock>
-        <!-- Move price to after title -->
+        <!-- Add button image and video -->
+        <referenceContainer name="content">
+            <referenceContainer name="product.info.media">
+                <block class="Magento\Framework\View\Element\Template" name="image.gallery" template="Magento_Catalog::product/view/image_gallery.phtml" group="choose_file" />
+                <block class="Magento\Framework\View\Element\Template" name="video.gallery" template="Magento_Catalog::product/view/video_gallery.phtml" group="choose_file" />
+            </referenceContainer>
+        </referenceContainer>
     </body>
 </page>

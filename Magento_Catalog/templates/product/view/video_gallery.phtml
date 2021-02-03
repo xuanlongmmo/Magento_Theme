@@ -1,0 +1,28 @@
+<?php
+$product_video = $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('product-test-video')
+    ->toHtml();
+?>
+<button class="video-gallery">Video</button>
+<script>
+require([
+    'jquery',
+    'popupWindow'
+], function($) {
+    var regex = /(<([^>]+)>)/ig
+    var product_video = "<?php echo $product_video ?>";
+    var result = product_video.replace(regex, "");
+    'use strict';
+    $(".video-gallery").popupWindow({
+        "windowURL": result,
+        "windowName": "Product Video",
+        "width": 800,
+        "height": 800,
+        "left": 0,
+        "top": 0,
+        "resizable": 1,
+        "scrollbars": 1
+    });
+});
+</script>
