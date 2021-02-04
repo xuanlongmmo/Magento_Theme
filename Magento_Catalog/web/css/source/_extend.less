@@ -5,9 +5,116 @@
     }
 }
 & when (@media-common = true) {
-//    Page product detail
+
+    //Page product detail
 
     // Link 
+    .page-layout-1column {
+        .page-wrapper .breadcrumbs {
+            border-bottom: 0px ;
+            margin-top: 45px;
+            padding-left: 22px;
+        }
+        .page-wrapper .breadcrumbs ul li a {
+            font-size: 12px;
+        }
+    }
+    // End link
+
+    //Image and detail product
+    .page-layout-1column .page-wrapper{
+        .page-main {
+            margin-top: -4px;
+            .columns {
+                display: flex;
+                .main {
+                    .product-info-main {
+                        margin-right: 68px;
+                        width: 497px;
+                        padding-top: 13px;
+                        // title
+                        .page-title {
+                            span.base {
+                                .mixin-product-info(38px,#45515d,-2px);
+                            }
+                        }
+                        .page-title-wrapper {
+                            text-align: unset;
+                        }
+                        .product.attribute.overview {
+                            margin: 28px 0;
+                        }
+                        .box-tocart .field.qty, .product-options-bottom .box-tocart .field.qty {
+                            display: block;
+                        }
+                        // button
+                        .box-tocart .action.tocart, .product-options-bottom .box-tocart .action.tocart {
+                            .mixin-button(518px,57px);
+                        }
+                        // price
+                        .product-info-price {
+                            margin-top: -13px;
+                            border-bottom: 1px solid #a3a3a3;
+                            display: flex;
+                            flex-wrap: wrap;
+                            .price-box {
+                                .old-price {
+                                    order: 1;
+                                    .price-container .price-wrapper .price {
+                                        color: #7d8084;
+                                        font-weight: 400;
+                                        font-size: 19px;
+                                    }
+                                }
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                .normal-price{
+                                    margin-top: 17px;
+                                    order: 2;
+                                    .price-container {
+                                        font-size: 25px;
+                                        letter-spacing: -3px;
+                                        line-height: 4px;
+                                        color: #b3203a;
+                                        font-weight: 400;
+                                        font-family: "Open Sans";
+                                        text-align: center;
+                                        flex-direction: row;
+                                        display: flex;
+                                        .price-wrapper {
+                                            padding-left: 7px;
+                                            order: 2;
+                                            .price {
+                                                font-size: 26px;
+                                            }
+                                        }
+                                        .price-now{
+                                            font-family: 'Sans-serif';
+                                            font-size: 25px;
+                                            order: 1;
+                                        }
+                                    }
+                                }
+                             
+                            }
+                            // review
+                            .product-reviews-summary {
+                                width: 65%;
+                            }
+                            // link
+                            .product-social-links{
+                                width: 35%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //End Image and detail product
+
+
     // css width list image
     .fotorama__nav .fotorama__nav--thumbs {
         width: 172px;
@@ -92,41 +199,8 @@
     
     .column.main{
         width: 100%;;
-        margin-top: 24px;
         .product-info-main {
-            width: 497px;
-            margin-right: -13px;
-            .page-title {
-                span.base {
-                    .mixin-product-info(36px,#45515d,-1);
-                }
-            }
-            .page-title-wrapper {
-                text-align: unset;
-            }
-            .product.attribute.overview {
-                margin: 28px 0;
-            }
-            .box-tocart .field.qty, .product-options-bottom .box-tocart .field.qty {
-                display: block;
-            }
-            .box-tocart .action.tocart, .product-options-bottom .box-tocart .action.tocart {
-                .mixin-button(518px,57px);
-            }
-            .product-info-price {
-               border-bottom: 1px solid #a3a3a3;
-               display: flex;
-               flex-wrap: wrap;
-               .price-box {
-                   width: 100%;
-               }
-               .product-reviews-summary {
-                   width: 65%;
-               }
-               .product-social-links{
-                   width: 35%;
-               }
-           }
+            
         }
         .product.info.detailed {
             width: 1050px;
@@ -162,13 +236,7 @@
           }
 
     }
-   .page-main {
-    .columns {
-        .column.main {
-            width: 100%;
-        }
-    }
-   }
+ 
    // css review
     .reviews-actions {
         .view {
@@ -210,9 +278,7 @@
             }
             
         }
-        .old-price {
-            order:1;
-        }
+     
     }
     .block.related {
         float: right;
@@ -226,6 +292,18 @@
             margin: 0 5px;
         }
         
+    }
+    // css width colunm main
+    .page-layout-1column {
+        .page-wrapper {
+            .page-main {
+                .columns {
+                    .column.main {
+                        width: 100%;
+                    }
+                }
+               }
+        }
     }
 /// End page product detail
 
@@ -478,6 +556,8 @@
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+   
+    
     .page-main .columns .sidebar-main {
         padding-right: 0;
         width: 15%;
