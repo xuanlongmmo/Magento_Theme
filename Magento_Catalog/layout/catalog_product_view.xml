@@ -69,5 +69,12 @@
                 <block class="Magento\Framework\View\Element\Template" name="video.gallery" template="Magento_Catalog::product/view/video_gallery.phtml" group="choose_file" />
             </referenceContainer>
         </referenceContainer>
+        <!-- Get id product -->
+        <!-- <referenceContainer name="content">
+            <referenceContainer name="product.info.main" htmlTag="div" htmlClass="product-info-main" before="-">
+                <block class="Magento\Framework\View\Element\Template" name="id.product" template="Magento_Catalog::product/view/idproduct.phtml" group="choose_file" />
+            </referenceContainer>
+        </referenceContainer> -->
+
     </body>
 </page>

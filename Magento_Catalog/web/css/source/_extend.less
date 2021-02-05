@@ -29,13 +29,13 @@
                 display: flex;
                 .main {
                     .product-info-main {
-                        margin-right: 68px;
-                        width: 497px;
+                        margin-right: 4px;
+                        width: 550px;
                         padding-top: 13px;
                         // title
                         .page-title {
                             span.base {
-                                .mixin-product-info(38px,#45515d,-2px);
+                                .mixin-product-info(37px,#45515d,-1.5px);
                             }
                         }
                         .page-title-wrapper {
@@ -53,6 +53,8 @@
                         }
                         // price
                         .product-info-price {
+                            padding-left: 5px;
+                            height: 123px;
                             margin-top: -13px;
                             border-bottom: 1px solid #a3a3a3;
                             display: flex;
@@ -70,7 +72,7 @@
                                 display: flex;
                                 flex-direction: column;
                                 .normal-price{
-                                    margin-top: 17px;
+                                    margin-top: 15px;
                                     order: 2;
                                     .price-container {
                                         font-size: 25px;
@@ -83,14 +85,18 @@
                                         flex-direction: row;
                                         display: flex;
                                         .price-wrapper {
-                                            padding-left: 7px;
+                                            padding-left: 3px;
+                                            padding-top: 2px;
                                             order: 2;
+                                            letter-spacing: 1px;
                                             .price {
                                                 font-size: 26px;
+                                                font-weight: 400;
                                             }
                                         }
                                         .price-now{
-                                            font-family: 'Sans-serif';
+                                            letter-spacing: 0px;
+                                            font-family: 'opensan-regular';
                                             font-size: 25px;
                                             order: 1;
                                         }
@@ -100,17 +106,142 @@
                             }
                             // review
                             .product-reviews-summary {
+                                margin-top: 21px;
                                 width: 65%;
+                                .rating-summary {
+                                    width: 96px;
+                                }
+                                .reviews-actions {
+                                    .view {
+                                        span {
+                                            text-transform: lowercase;
+                                        }
+                                    }
+                                }
                             }
                             // link
                             .product-social-links{
+                                padding-top: 25px;
                                 width: 35%;
+                                .share {
+                                    p {
+                                        padding-left: 85px;
+                                        i {
+                                            width: 11px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .product-add-form {
+                            .product-options-wrapper {
+                                .fieldset .swatch-opt .swatch-attribute {
+                                    .swatch-attribute-label {
+                                        padding-left: 3px;
+                                        word-spacing: -1px;
+                                    }
+                                    .swatch-attribute-selected-option {
+                                        padding-left: 3px;
+                                        font-weight: 700;
+                                        word-spacing: -2px;
+                                        
+                                    }
+                                    .swatch-attribute-options .swatch-option {
+                                        outline: 0px;
+                                    }
+                                }
+                            }
+                            .product-options-bottom {
+                                .box-tocart {
+                                    .fieldset {
+                                        .qty{
+                                            .control {
+                                                padding-left: 2px;
+                                                margin-top: 5px;
+                                            }
+                                            .label {
+                                                padding-top: 2px;
+                                                padding-left: 4px;
+                                            }
+                                        }
+                                        .actions {
+                                            padding-top: 3px;
+                                            padding-left: 3px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        // css information product
+                        .product.attribute.overview {
+                            .value {
+                                p {
+                                    padding-top: 6px;
+                                    padding-left: 4px;
+                                    width: 518px;
+                                    height: 94px;
+                                    font-size: 14px;
+                                    color: #5b5b5b;
+                                    font-weight: 400;
+                                    font-family: "Open Sans";
+                                    word-spacing: 4px;
+                                    line-height: 17px;
+                                }
+                            }
+                        }
+                    }
+                    .product.media {
+                        width: 63%;
+                        .gallery-placeholder {
+                            height: 875px;
+                            .fotorama-item {
+                                .fotorama__wrap {
+                                   .fotorama__stage {
+                                        width: 875px;
+                                        height: 875px;
+                                   }
+                                   .fotorama__nav-wrap--vertical {   
+                                        height: 875px;
+                                   }
+                                }
                             }
                         }
                     }
                 }
             }
         }
+    }
+     // css change color star
+     .rating-summary .rating-result>span:before {
+        padding-left: 4px;
+        color: #ebd435;
+        font-size: 26px;
+    }
+    .rating-summary .rating-result:before {
+        padding-left: 4px;
+        font-size: 26px;
+    }
+    // css button onesize
+    .swatch-option.text {
+        padding: 8px 17px;
+        border-radius: 5%;
+    }
+    .swatch-option.text.selected {
+        background-color: #e7e4e4;
+    }
+    // css width height input test qty
+    .product-options-bottom .box-tocart .input-text.qty {
+        height: 40px;
+        text-align: center;
+        width: 60px;
+        font-family: 'opensan-regular';
+        font-size: 16px;
+    }
+    /// css text one size
+    .swatch-attribute.size .swatch-option.selected {
+        color: #45515d;
+        font-weight: 400;
+        font-size: 14px;
     }
     //End Image and detail product
 
@@ -121,13 +252,11 @@
     }
     // css button image
     .image-gallery {
-        background-color: #ececec;
-        width: 500px;
+        .mixin-button-image-video(12px);
     }
     // css button video
     .video-gallery {
-        background-color: #ececec;
-        width: 500px;
+        .mixin-button-image-video(0px);
     }
     // css hidden ???
     .product-item-info .product-item-details {
@@ -138,10 +267,7 @@
             display: none;
         }
     }
-    // css change color star
-    .rating-summary .rating-result>span:before {
-        color: #ebd435;
-    }
+   
     // ???
     .swatch-attribute-label {
         font-weight: 400;
@@ -274,6 +400,9 @@
                 .price-now{
                     font-size: 28px;
                     order: 1;
+                }
+                .price-label {
+                    display: none;
                 }
             }
             
