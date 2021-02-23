@@ -1,7 +1,7 @@
 @font-opensans-regular:'OpenSans-Regular';
 
 // product details
-.mixin-product-info(@fonts,@color,@letter) {
+.mixin-product-title (@fonts,@color,@letter) {
     font-size: @fonts;
     letter-spacing: @letter;
     line-height: 4px;
@@ -21,7 +21,7 @@
     font-weight: 400;
     font-family: @font-opensans-regular;
 }
-.mixin-button(@width,@height) {
+.mixin-button(@height) {
     background-color: @color-green;
     font-size: @font-size18;
     line-height: @font-size4;
@@ -29,17 +29,53 @@
     font-weight: 700;
     font-family: "Open Sans";
     text-align: center;
-    width: @width;
     height: @height;
+    width: 100%;
 }
-.mixin-button-image-video(@margin-right) {
+.mixin-button-image-video(@width) {
     background-color: #ececec;
-    width: 509px;
+    width: @width;
     height: 45px;
-    margin-right: @margin-right;
     font-size: 15px;
     color: #5b5b5b;
     font-weight: 400;
     font-family: "Open Sans";
     text-align: center;
+}
+.mixin-margin-center(@width) {
+    width: @width;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mixin-text-list-footer(@font-size) {
+    font-size: @font-size;
+    word-spacing: 5px;
+    color: #f4f4f4;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+.mixin-tab-title(@fonts) {
+    font-size: @fonts;
+    font-weight: 600;
+    text-align: center;
+    // font-family: @font-opensans-semibold;
+}
+.mixin-product-extras(@fonts,@color,@letter) {
+    font-size: @fonts;
+    letter-spacing: @letter;
+    line-height: 4px;
+    color: @color;
+    font-weight: 400;
+}
+.mixin-center() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.mixin-pro-content(@fonts,@color) {
+    font-size: @fonts;
+    color: @color;
+    font-weight: 400;
+    font-family: @font-opensans-regular;
 }
