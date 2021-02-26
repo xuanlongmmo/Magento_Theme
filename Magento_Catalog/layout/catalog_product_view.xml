@@ -70,11 +70,11 @@
             </referenceContainer>
         </referenceContainer>
         <!-- Get id product -->
-        <!-- <referenceContainer name="content">
+        <referenceContainer name="content">
             <referenceContainer name="product.info.main" htmlTag="div" htmlClass="product-info-main" before="-">
-                <block class="Magento\Framework\View\Element\Template" name="id.product" template="Magento_Catalog::product/view/idproduct.phtml" group="choose_file" />
+                <block class="Magento\Framework\View\Element\Template" name="id.product" template="Magento_Catalog::product/id_product.phtml" group="choose_file" />
             </referenceContainer>
-        </referenceContainer> -->
+        </referenceContainer>
 
     </body>
 </page>
