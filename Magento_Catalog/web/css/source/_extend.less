@@ -10,6 +10,9 @@
 }
 & when (@media-common = true) {
     //page detail
+    .page-wrapper .breadcrumbs ul li strong {
+        color: #333;   
+    }
     .page-layout-1column .page-wrapper {
         .page-main {
             .columns {
@@ -207,9 +210,9 @@
     .product.data.items .item.content {
         border: 2px solid #b4b4b4;
     }
-    .control .input-text {
-        width: 100%;
-    }
+    // .control .input-text {
+    //     width: 100%;
+    // }
     // css title product related
     .block .title {
         color: #6c6b6b;
@@ -236,7 +239,7 @@
         border-bottom: 1px solid #e2e0e1;
         padding-bottom: 11px;
     }
-
+   
     .page-title-wrapper {
         text-align: center;
         margin-top: -10px;
@@ -381,9 +384,15 @@
      .fotorama__thumb-border {
          display: none;
      }
-     .fotorama__arr .fotorama__arr--next {
-        display: none;
+     .fotorama__stage {
+        .fotorama__arr .fotorama__arr--next {
+            display: none;
+         }
+         .fotorama__arr .fotorama__arr--prev {
+            display: none;
+        }
      }
+     
     // buttton image and video
     .button-image-video {
         margin-bottom: 10px;
@@ -525,6 +534,7 @@
         }
       
     } 
+   
     .column.main .block:last-child {
         width: 100%;
         order: 4;
@@ -595,8 +605,7 @@
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
-    // page detail product
-    // css layout
+    // // css layout
     .page-main .columns .column.main {
         .product-info-main {
             margin-left: 3.7%;
@@ -716,14 +725,23 @@
 }
 @media only screen and (min-width: 1920px) {
     // css product detail
-    
+    // logo
+    .page-wrapper .page-header .content {
+        a {
+            padding-top: 7px;
+            padding-left: 7px;
+            img {
+                width: 170px;
+            }
+        }
+    }
     // main
     .page-wrapper .page-main {
         margin-top: -2px;
     }
     // css title
     .page-layout-1column .page-wrapper .breadcrumbs {
-        margin-top: 45px;
+        margin-top: 31px;
         padding-left: 11px;
         padding-right: 11px;
     }
@@ -753,6 +771,7 @@
         height: 860px;
         margin-left: 4px;
     }
+    
     .fotorama__stage  {
         width: 857px !important;
         height: 860px !important;
@@ -779,7 +798,7 @@
 
     // button image video
     .button-image-video {
-        margin-top: 0px;
+        margin-top: -10px;
     }
     .button-image-video .image-gallery {
         font-size: 17px;
@@ -928,7 +947,17 @@
         .value p {
             padding-left: 3px;
             line-height: 17px;
+            margin-bottom: 24px;
+
         }
+        .value a {
+            text-decoration: revert;
+        }
+    }
+    //
+    .id_product {
+        word-spacing: 4px;
+        color: #717171;
     }
     // tab 
     .page-main .columns .column.main .product.info.detailed {
